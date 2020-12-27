@@ -10,6 +10,7 @@ chrome.runtime.onInstalled.addListener(function () {
 chrome.contextMenus.onClicked.addListener(function (info, tab) {
     var w = 550, h = 420
     var url = 'http://api.macvendors.com/' + encodeURIComponent(info.selectionText)
+    // TODO: https://gist.github.com/samymassoud/600eb372af6645e79ada
     window.open(url, "_blank", "width = " + w + ", height = " + h +
         ", left = " + (screen.width - w) / 2 + ", top = " + (screen.height - h) / 2 +
         ", scrollbars = yes, resizable = yes, toolbar = no, location = yes")
